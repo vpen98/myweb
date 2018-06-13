@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "${workspaceFolder}/../Scripts/python"
+    "python.pythonPath": "${workspaceFolder}/../Scripts/python",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--errors-only"
+    ]
 }
