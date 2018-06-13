@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
-from Firstproject.index import Helloworld,nowtime
+from mainsite.views import homepage,showpost
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', Helloworld),
-    url(r'^time/$', nowtime)
+    url(r'^$', homepage),
+    url(r'^post/(\w+|.+)$', showpost), #把所有post/开头的网址的后面字符串都找出来,单纯的\w+找不到含有空格的slug
+    
 ]

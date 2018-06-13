@@ -1,0 +1,9 @@
+<!--footer.html-->
+{% block footer %} 
+<!--判断now变量是否又内容，有就显示现在时刻，没有显示声明-->
+    {% if now %}
+    <p style = 'font-family: 微软雅黑;'> TIME: {{ now }} </p>
+    {% else %}
+    <p style = 'font-family: 微软雅黑;'>内容来源网络</p>
+    {% endif %}
+{% endblock %}
