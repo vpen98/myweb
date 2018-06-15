@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "${workspaceFolder}/../Scripts/python",
+    "python.pythonPath": "e:\\django-project-env\\Scripts\\python.exe",
     "python.linting.pylintArgs": [
         "--load-plugins=pylint_django",
         "--errors-only"

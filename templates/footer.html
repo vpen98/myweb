@@ -1,9 +1,15 @@
 <!--footer.html-->
+<!--每个网页的共享页尾-->
+
 {% block footer %} 
 <!--判断now变量是否又内容，有就显示现在时刻，没有显示声明-->
     {% if now %}
-    <p style = 'font-family: 微软雅黑;'> TIME: {{ now }} </p>
+    <p style = 'font-family: 微软雅黑;' align='center'> 北京时间: {{ now|date:"Y M d,h:m:s" }} </p>
     {% else %}
-    <p style = 'font-family: 微软雅黑;'>内容来源网络</p>
+    
+    <p style = 'font-family:微软雅黑;font-size: 10pt;font-weight: bold;' align="right"> 
+        <a href="/admin/mainsite/post/{{post.id}}/change/">重写</a> 
+    </p>
+    
     {% endif %}
 {% endblock %}

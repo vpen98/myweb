@@ -8,11 +8,10 @@ from django.shortcuts import redirect
 
 
 def homepage(request):
-    template = get_template('index.html')
+    template = get_template('index.html') # 加载网页模板
     posts = Post.objects.all()
     now = datetime.now()
     html = template.render(locals())  #把当前内存中的所有局部变量使用字典类型打包起来 
-    
     return HttpResponse(html)
 
 def showpost(request,slug):
