@@ -14,10 +14,10 @@ def homepage(request):
     html = template.render(locals())  #把当前内存中的所有局部变量使用字典类型打包起来 
     return HttpResponse(html)
 
-def showpost(request,slug):
+def showpost(request,title):
     template = get_template('post.html')
     try:
-        post = Post.objects.get(slug=slug)
+        post = Post.objects.get(title=title)
         if post != None:
             html = template.render(locals())
             return HttpResponse(html)

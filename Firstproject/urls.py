@@ -21,6 +21,8 @@ from mainsite.views import homepage,showpost
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', homepage),
-    url(r'^post/(\w+|.+)$', showpost), #把所有post/开头的网址的后面字符串都找出来,单纯的\w+找不到含有空格的slug
+    url(r'^post/(\w+|.+)$', showpost), 
+    #把所有post/开头的网址的后面字符串都找出来,单纯的\w+找不到含有空格的,
+    # 小括号表示是一组要取出的参数，在小括号中取出来的内容会自动以参数的方式的方式传送到后面的函数里，
     
 ]
